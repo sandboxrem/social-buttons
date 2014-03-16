@@ -1,6 +1,6 @@
 module SocialButtons
   def self.names
-    %w{pinit tweet like google_plus}
+    %w{pinit tweet like google_plus vkontakte}
   end
 
   def self.helpers
