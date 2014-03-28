@@ -10,7 +10,7 @@ module SocialButtons
 
       html = "".html_safe
       html << clazz::Scripter.new(self).init_js(appId)
-      html << content_tag(:div, nil, id: "vk_like")
+      html << content_tag(:div, nil, id: "vk_like_#{options[:verb]}")
       html << clazz::Scripter.new(self).script(options)
       html
     end
@@ -21,8 +21,7 @@ module SocialButtons
           width: '350',
           type: 'vertical',
           verb: '0',
-          height: '22',
-          verb: '0'
+          height: '22'
         }
       end      
     end
