@@ -33,7 +33,7 @@ module SocialButtons
       def script options = {}
         [
           "<script type=\"text/javascript\">",
-          "VK.Widgets.Like(\"vk_like_#{options[:verb]}\", { type: \"#{options[:type]}\", width: '#{options[:width]}', verb: '#{options[:verb] }'});",
+          "VK.Widgets.Like(\"vk_like_#{options[:verb]}\", { type: \"#{options[:type]}\", width: '#{options[:width]}', verb: '#{options[:verb] }', pageUrl: '#{options[:url]}', pageTitle: '#{options[:title]}', width: '#{options[:width]}', pageDescription: '#{options[:desc]}', pageImage: '#{options[:image]}'  });",
           "</script>"
         ].join.html_safe
       end
